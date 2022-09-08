@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#090b0d] ">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pensil</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'herotop': "url(./assets/h1.png)",
+            'herobg': "url('./assets/2.jpg')",
+            'Developer': "url('./assets/3.png')",
+          },
+          colors: {
+            'mblue': '#4754ff',
+            'mblack': '#040405',
+            'bgBlue': '#090e18',
+            'mpurple': '#414eeb',
+            'btnblue': '#4754ff',
+            'hoverblue': '#6171ff',
+            'borderColorb': '#46c8ff',
+            'borderColorp': '#456fff',
+            'bgBlack': '#0000006d',
+            'borderColorppur': '#4154ff',
+            'borderColorppin':'#46c7e3',
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+
+          },
+        }
+      }
+    }
+
+  </script>
+</head>
+<style>
+</style>
+
+<body class="text-white">
+  <div class="bg-[#ffffff20] text-center py-2">
+    Really excited to onboard our new advisor, Hitesh Choudhary <a href="" class="text-mpurple"> Learn more ></a>
+  </div>
+  <div class="navbar bg-mblack text-white sticky top-0 lg:px-10 z-[100] py-3">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost mr-5 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-bgBlue rounded-box w-52">
+          <li tabindex="0">
+            <a
+              class="justify-between border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">
+              Use case
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2 bg-bgBlue">
+              <li><a href="https://www.pensil.in/integration"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Integration</a>
+              </li>
+              <li><a href="https://www.pensil.in/blog"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Blog</a>
+              </li>
+              <li><a href="https://team.pensil.in/g/pensil/s/updates"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">What's
+                  New</a></li>
+            </ul>
+          </li>
+          <li tabindex="0">
+            <a
+              class="justify-between border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">
+              Resources
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2 bg-bgBlue">
+              <li><a href="https://www.pensil.in/usecase/cohort-based-courses"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Cohort
+                  Based Courses</a></li>
+              <li><a href="https://www.pensil.in/usecase/brands-and-startups"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Startup
+                  or Brand Community</a></li>
+              <li><a href="https://www.pensil.in/usecase/mentors-and-coaches"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Mentors
+                  or Coaches</a></li>
+            </ul>
+          </li>
+          <li><a
+              class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Pricing</a>
+          </li>
+          <li class="bg-btnblue mx-3 my-2 rounded-lg hover:bg-hoverblue"><a>Login</a></li>
+          <li class="bg-btnblue mx-3 my-2 rounded-lg hover:bg-hoverblue"><a>Try for free</a></li>
+        </ul>
+      </div>
+
+      <img draggable="false" class="hidden lg:flex" src="./assets/Pensil.svg" alt="pensil">
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0 ">
+        <li tabindex="0">
+          <a>
+            Use case
+            <svg class="fill-current opacity-0.8" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2 bg-bgBlue">
+            <li><a href="https://www.pensil.in/usecase/cohort-based-courses"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Cohort
+                Based Courses</a></li>
+            <li><a href="https://www.pensil.in/usecase/brands-and-startups"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Startup
+                or Brand Community</a></li>
+            <li><a href="https://www.pensil.in/usecase/mentors-and-coaches"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Mentors
+                or Coaches</a></li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a>
+            Resources
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2 bg-bgBlue">
+            <li><a href="https://www.pensil.in/integration"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Integration</a>
+            </li>
+            <li><a href="https://www.pensil.in/blog"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">Blog</a>
+            </li>
+            <li><a href="https://team.pensil.in/g/pensil/s/updates"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue">What's
+                New</a></li>
+          </ul>
+        </li>
+        <li><a>Pricing</a></li>
+      </ul>
+
+    </div>
+    <div class="hidden lg:flex navbar-end gap-2">
+      <a class="btn bg-btnblue rounded-lg hover:bg-hoverblue">Login</a>
+      <a class="btn bg-btnblue rounded-lg hover:bg-hoverblue">Try for free</a>
+    </div>
+    <div class="flex-1"></div>
+    <img draggable="false" class="mr-5 w-28 md:w-36 lg:hidden" src="./assets/Pensil.svg" alt="pensil">
+  </div>
+  <img draggable="false" src="./assets/1.png" alt="" class="bg-cover">
+
+  <section>
+    <div
+      class="container mx-auto flex flex-col items-center px-4 my-[-25px] text-center md:my-[-50px] md:px-10 lg:px-0 lg:my-[-100px] xl:max-w-3xl ">
+      <h1
+        class="text-4xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold leading-none sm:text-5xl md:text-6xl">
+        One platform for all your community needs
+      </h1>
+      <p class="px-8 mt-8 mb-12 text-3xl text-gray-400 "><a href="https://app.pensil.in/"
+          class="hover:text-[#056799] transition duration-300 ease-out hover:ease-in"> Try for free <i
+            class="fa-solid fa-chevron-right"></i></a></p>
+
+    </div>
+  </section>
+
+  <section class="my-10 bg-herobg bg-cover lg:my-60">
+    <video autoplay="autoplay" loop="true" muted defaultmuted
+      class="mx-auto mb-[8%] w-[80%] rounded-[25px] opacity-90 lg:w-[65%] " src="./assets/hero1.mp4"></video>
+
+
+    <section class="mt-36">
+      <div class="container mx-auto flex flex-col items-center  px-4  text-center   xl:max-w-6xl ">
+        <h1
+          class="text-2xl h-full font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-[#4154ff] to-[#46c7e3] font-semibold leading-none sm:text-5xl md:text-5xl">
+          Improve retention, growth and advocacy with the all-in-one community engagement platform
+
+        </h1>
+      </div>
+    </section>
+    <section class="text-gray-600 body-font py-10 lg:py-0">
+      <div class="container px-5  mx-auto flex flex-wrap lg:py-24 lg:px-20">
+        <div class="pt-10 lg:pt-0 lg:w-2/3 w-full my-auto h-full  rounded-lg overflow-hidden ">
+          <video autoplay="autoplay" loop="true" muted defaultmuted class="mx-auto w-[80%] rounded-[25px] md:w-[95%] opacity-75 "
+            src="./assets/hero2.mp4 "></video>
+            <img src="./assets/shadow.png" alt="" class="mx-auto w-[100%] pt-2">
+
+        </div>
+        <div
+          class="flex flex-col flex-wrap mt-10 lg:my-auto lg:py-0 mb-10 h-full lg:w-1/3 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 my-auto lg:items-start items-center">
+            <h1 class="text-4xl my-5 text-white">Designed for all usecases
+              <h2 class="lg:text-xl text-gray-500">From open discussion to gated content. Create different groups for
+                all kind of use case, like coaching, mentoring, courses, forums, live classes etc
+                Replaces</h2>
+              <h3 class="text-xl text-gray-200 mt-5"><span class="text-lg text-gray-400">Replaces</span> <br> Slack OR
+                Discord OR Forum</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-5 mb-10 mx-auto flex flex-wrap lg:py-24 lg:px-20">
+        
+        <div
+          class="flex flex-col flex-wrap mt-10 lg:order-first lg:my-auto lg:py-0 mb-10 h-full lg:w-1/3 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 my-auto lg:items-start items-center">
+            <h1 class="text-4xl my-5 text-white">Your Community. Your Branding.
+              <h2 class="lg:text-xl text-gray-500">Design your community to match your branding. Make it feel like your own product with complete customization & integration, including mobile app</h2>
+              <h3 class="text-xl text-gray-200 mt-5"><span class="text-lg text-gray-400">Avoids</span> <br>
+                Custom development</h3>
+          </div>
+
+        </div>
+        <div class="order-first lg:w-2/3 w-full my-auto h-full  rounded-lg overflow-hidden ">
+          <video autoplay="autoplay" loop="true" muted defaultmuted class="mx-auto w-[80%] rounded-[25px] md:w-[95%] opacity-75 "
+            src="./assets/video.mp4 "></video>
+            <img src="./assets/shadow.png" alt="" class="mx-auto w-[100%] pt-2">
+
+        </div>
+      </div>
+    </section>
+
+<section class="my-28">
+  <h1 class="mx-auto text-center text-4xl font-semibold"><span class="animate-pulse">🔴</span> Live Sessions</h1>
+  <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
+    <img class="opacity-70 w-[95%] lg:w-[70%]" src="./assets/videocall.png" alt="conference">
+    <div class="block lg:flex flex-wrap mx-10 lg:mx-36">
+      <div class="p-4 w-1/1 lg:w-1/3">
+        <div class="flex rounded-lg h-full py-5 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-2xl text-white title-font font-medium">Immersive Experince</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed lg:text-lg text-gray-500">Conduct Live sessions or webinar, get the best audio video quality</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 w-1/1 lg:w-1/3">
+        <div class="flex rounded-lg h-full py-5 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-2xl text-white title-font font-medium">Host Event with Live QnA</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed lg:text-lg text-gray-500">Invite hosts, moderator & get the best live experience for your commmunity</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 w-1/1 lg:w-1/3">
+        <div class="flex rounded-lg h-full py-5 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-2xl text-white title-font font-medium">Share your live recordings</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed lg:text-lg text-gray-500">Share or post recording on Youtube, Facebook, Vimeo, or any other platform</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Made For Developers, By Developers -->
+    <section class="text-white-300 body-font bg-Developer bg-contain bg-no-repeat bg-right">
+      <div class="bg-black/[0.5]">
+        <div class="container px-5 py-20 mx-auto">
+          <h1 class="sm:text-4xl text-3xl font-medium text-center title-font mb-10 text-white">Made For Developers, By
+            Developers</h1>
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:order-first lg:pr-10 lg:py-6 mb-6 mt-6 lg:mt-0 lg:mb-0">
+              <h2 class="mb-8 text-lg lg:text-xl text-gray-400">From easy integrations to deploy your own front end, we
+                have everything you need
+                to get started. Integrate with our SDKs. Some SDKs may require some additional configuration through
+                your
+                Dev Portal.</h2>
+              <p class=" mt-8 mb-12 text-2xl text-gray-200 "><a href="https://docs.pensil.in/" target="_blank"
+                  class="hover:text-pink-500 transition duration-300 ease-out hover:ease-in"> Explore Docs <i
+                    class="fa-solid fa-chevron-right"></i></a></p>
+            </div>
+            <div class="mockup-code order-first bg-bgBlue/[0.8] lg:w-1/2 w-full mx-auto">
+              <pre data-prefix="1"><code class="text-borderColorb">script</code></pre>
+              <pre data-prefix="2"
+                class="text-gray-200"><code class="text-success">&nbsp // Load the SDK asynchronously</code></pre> 
+              <pre data-prefix="3"
+                class="text-gray-200"><code>&nbsp (<span class="text-pink-500">function </span>(d, s, id)) {</code></pre>
+              <pre data-prefix="4"
+                class="text-gray-200"><code>&nbsp <span class="text-pink-500">var</span> js, sjs = d.getElementsByTagName(s)[0]</code></pre>
+              <pre data-prefix="5"
+                class="text-gray-200"><code>&nbsp <span class="text-pink-500">if</span> (d.getElementById(id)) <span class="text-pink-500">return</span>;</code></pre>
+              <pre data-prefix="6" class="text-gray-200"><code>&nbsp js = d.createElement(s); js.id = id;</code></pre>
+              <pre data-prefix="7"
+                class="text-gray-200"><code>&nbsp js.src = <span class="text-red-400">"https://sdk.pensil.in/js/v1/create.js"</span>;</code></pre>
+              <pre data-prefix="8" class="text-gray-200"><code>&nbsp sjs.parentNode.insertBefore(js, sjs);</code></pre>
+              <pre data-prefix="9" class="text-gray-200"><code>&nbsp }(document, <span class="text-red-400">'script'</span>, <span class="text-red-400">'pensil-section-sdk'</span>));</code></pre>
+              <pre data-prefix="10"><code class="text-borderColorb">/script</code></pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<section class="team">
+  <ul class="cards">
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Anurag Trivedi</h3>            
+              <span class="card__status">Shaan Foundation</span>
+            </div>
+          </div>
+          <p class="card__description">"We use the Pensil platform to interlink all our rural libraries and also to connect city volunteers with students in villages in Rural Lucknow"</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/62751d1511a53c226bd91da8_image%20224.png" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>      
+    </li>
+    
+  </ul>
+</section>
+
+    <section class="text-white-300 body-font overflow-hidden">
+      <div class="container px-5 py-56 mx-auto">
+          <section class="text-gray-600 body-font">
+            <div class=" px-0 flex flex-col sm:flex-row sm:items-center justify-around items-start mx-auto">
+              <h1 class=" text-3xl sm:text-4xl lg:text-6xl font-medium text-center title-font mb-10 text-white">Community Blogs</h1>
+            </div>
+            <div class=" px-0 py-10">
+              <div class="flex flex-wrap mb-10 justify-center gap-16 text-center">
+                <div
+                  class="transition duration-200 ease-out hover:ease-in w-2/2 hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-l-purple-600/[0.6] lg:hover:border-t-pink-500/[0.6]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2">
+                  <div class=" w-full overflow-hidden flex justify-center">
+                    <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                      src="./assets/c1.jpg">
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-300 mt-6 mb-6">WhatsApp Groups : The Worst
+                    Platform To Host Your Online Community. Here's Why!</h2>
+
+                  <p class="leading-relaxed mt-5 text-gray-400">A WhatsApp group text is great for family or friends, but as
+                    a Community Platform, it's hard to see how it works.Let's take a deeper look at the problems in
+                    hosting your community on a WhatsApp Group.
+
+                  </p>
+                </div>
+                <div
+                  class="transition duration-200 ease-out hover:ease-in w-2/2  hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:hover:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-r-borderColorp/[0.7] lg:hover:border-t-borderColorb/[0.7]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2">
+                  <div class=" w-full overflow-hidden flex justify-center">
+                    <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                      src="./assets/c2.jpg">
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-300 mt-6 mb-6">Life of a community ops manager
+                  </h2>
+
+                  <p class="leading-relaxed mt-5 text-gray-400">Community operations enable CMs to operate the vehicle and
+                    ensure that it stays on the road by making sure all of the gears are the proper size, greased,
+                    screwed in correctly, and linked to the proper circuits.</p>
+                </div>
+                <div
+                  class="transition duration-200 ease-out hover:ease-in w-2/2 hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-l-purple-600/[0.6] lg:hover:border-b-pink-500/[0.6]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2">
+                  <div class=" w-full overflow-hidden flex justify-center">
+                    <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                      src="./assets/c3.jpg">
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-300 mt-6 mb-6">Community management as career
+                  </h2>
+
+                  <p class="leading-relaxed mt-5 text-gray-400">Transitioning from "in-the-weeds" labour to more high-level,
+                    strategic work is a typical issue for community leaders.</p>
+                </div>
+                <div
+                  class="transition duration-200 ease-out hover:ease-in w-2/2 hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:hover:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-r-borderColorp/[0.7] lg:hover:border-b-borderColorb/[0.7]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2">
+                  <div class=" w-full overflow-hidden flex justify-center">
+                    <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                      src="./assets/c4.jpg">
+                  </div>
+                  <h2 class="title-font text-2xl font-medium text-gray-300 mt-6 mb-6">Why Discord Is NOT The Best Tool
+                    For Your Community/Online Course</h2>
+                  <p class="leading-relaxed mt-5 text-gray-400">From voice notes and scheduling to managing chats and forums
+                    - there are a lot of issues associated with using Discord for community building.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full text-center">
+              <a href="https://www.pensil.in/blog" class="mx-auto text-gray-400 text-lg border-2 rounded-[10px] border-gray-700 px-12 py-4 font-bold hover:border-gray-500 hover:text-white transition duration-300 ease-out hover:ease-in" target="_blank">Read More</a>
+            </div>
+          </section>
+      </div>
+    </section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+  <img draggable="false" src="./assets/2 (2).png" alt="">
+  <footer class="text-gray-600 body-font bg-black">
+    <div
+      class="container  py-24 mx-auto flex md:px-36 md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="#" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img draggable="false"
+            src="https://uploads-ssl.webflow.com/615a8096dd69ecb979d5ea68/61603eebe2de9c6ea99ba69a_pensil%20logo%20svg.svg"
+            alt="logo" class="h-full w-88">
+        </a>
+        <p class="mt-2 text-sm text-gray-500">© Pensil. All Rights Reserved.</p>
+        <p class="mt-2 text-lg text-gray-500">Made with ❤️ from India</p>
+        <p class="mt-5"><a href="#" class="mt-2 text-sm text-gray-500">Privacy Policy</a></p>
+        <p><a href="#" class="mt-2 text-sm text-gray-500">Terms & Conditions</a></p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Pensil</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Try For Free</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Mobile App</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Product Overview</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Watch Demo</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Email Us</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Resources</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Updates</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Integration</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Roadmap</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Pensil Community</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white  tracking-widest text-md mb-3">Compare</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Discourse</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Discord</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Mighty Network</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Tribe</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Circle</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Follow Us On</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Twitter</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Linkedin</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-700">Facebook</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

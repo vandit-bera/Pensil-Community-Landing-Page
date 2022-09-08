@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#090b0d] scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pensil - All in one community platform</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Link Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Script for configration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'herotop': "url(./assets/h1.png)",
+            'herobg': "url('./assets/2.jpg')",
+            'Developer': "url('./assets/3.png')",
+            'super': "url('./assets/4.png')",
+            'mobile': "url('./assets/m1.png')",
+          },
+          colors: {
+            'mblue': '#4754ff',
+            'mblack': '#040405',
+            'bgBlue': '#090e18',
+            'mpurple': '#414eeb',
+            'btnblue': '#4754ff',
+            'hoverblue': '#6171ff',
+            'borderColorb': '#46c8ff',
+            'borderColorp': '#456fff',
+            'bgBlack': '#0000006d',
+            'borderColorppur': '#4154ff',
+            'borderColorppin': '#46c7e3',
+            'cursorpin': '#902e61'
+          },
+          fontFamily: {
+            Ubuntu: ["Ubuntu", "sans-serif"],
+          },
+        }
+      }
+    }
+
+  </script>
+</head>
+<style>
+  /* Custom Scroll */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 100px #090b0d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #456fff;
+  }
+  ::-moz-selection{
+    color: #ffffff;
+    background: #1f2937;
+  }
+  ::selection{
+    color: #ffffff;
+    background: #1f2937;
+  }
+</style>
+
+<body class="text-white font-Ubuntu">
+
+
+  <!-- Top Bar -->
+  <div class="bg-[#ffffff20] text-center py-2">
+    Really excited to onboard our new advisor, Hitesh Choudhary <a href="https://www.pensil.in/about-us"
+      class="text-mpurple"> Learn more ></a>
+  </div>
+
+
+  <!-- Nav-Bar -->
+  <div class="navbar bg-mblack/[0.96] text-white sticky top-0 lg:px-10 z-[100] py-3">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost mr-5 lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-bgBlue rounded-box w-52">
+          <li tabindex="0">
+            <a
+              class="justify-between border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">
+              Use case
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2 bg-bgBlue">
+              <li><a href="https://www.pensil.in/integration"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Integration</a>
+              </li>
+              <li><a href="https://www.pensil.in/blog"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Blog</a>
+              </li>
+              <li><a href="https://team.pensil.in/g/pensil/s/updates"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">What's
+                  New</a></li>
+            </ul>
+          </li>
+          <li tabindex="0">
+            <a
+              class="justify-between border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">
+              Resources
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2 bg-bgBlue">
+              <li><a href="https://www.pensil.in/usecase/cohort-based-courses"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in ">Cohort
+                  Based Courses</a></li>
+              <li><a href="https://www.pensil.in/usecase/brands-and-startups"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Startup
+                  or Brand Community</a></li>
+              <li><a href="https://www.pensil.in/usecase/mentors-and-coaches"
+                  class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Mentors
+                  or Coaches</a></li>
+            </ul>
+          </li>
+          <li><a
+              class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Pricing</a>
+          </li>
+          <li class="bg-btnblue mx-3 my-2 rounded-lg hover:bg-hoverblue"><a>Login</a></li>
+          <li class="bg-btnblue mx-3 my-2 rounded-lg hover:bg-hoverblue"><a>Try for free
+
+            </a></li>
+        </ul>
+      </div>
+
+      <img draggable="false" class="hidden lg:flex" src="./assets/Pensil.svg" alt="pensil">
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0 ">
+        <li tabindex="0">
+          <a>
+            Use case
+            <svg class="fill-current opacity-0.8" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2 bg-bgBlue">
+            <li><a href="https://www.pensil.in/usecase/cohort-based-courses"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue transition duration-200 ease-out hover:ease-in">Cohort
+                Based Courses</a></li>
+            <li><a href="https://www.pensil.in/usecase/brands-and-startups"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue transition duration-200 ease-out hover:ease-in">Startup
+                or Brand Community</a></li>
+            <li><a href="https://www.pensil.in/usecase/mentors-and-coaches"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue transition duration-200 ease-out hover:ease-in">Mentors
+                or Coaches</a></li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a>
+            Resources
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2 bg-bgBlue">
+            <li><a href="https://www.pensil.in/integration"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Integration</a>
+            </li>
+            <li><a href="https://www.pensil.in/blog"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">Blog</a>
+            </li>
+            <li><a href="https://team.pensil.in/g/pensil/s/updates"
+                class="border-bgBlue hover:border-2 hover:border-l-borderColorp hover:border-b-borderColorb hover:border-t-bgBlue hover:border-r-bgBlue duration-200 ease-out hover:ease-in">What's
+                New</a></li>
+          </ul>
+        </li>
+        <li><a>Pricing</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="hidden lg:flex navbar-end gap-2">
+
+      <label for="my-modal-4" class="btn modal-button">Login</label>
+      <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+      <label for="my-modal-4" class="modal cursor-pointer">
+        <label class="modal-box relative bg-black/[0.8]" for="">
+          <label for="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+          <div class="w-full max-w-sm  m-auto mx-auto rounded-md ">
+            <img class="mx-auto" src="./assets/Pensil.svg" alt="">
+            <form class="mt-6">
+              <div>
+                <label for="username" class="block text-sm text-gray-300 ">Username</label>
+                <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border rounded-md">
+              </div>
+
+              <div class="mt-4">
+                <div class="flex items-center justify-between">
+                  <label for="password" class="block text-sm text-gray-300">Password</label>
+                  <a href="#" class="text-xs text-gray-400 hover:underline">Forget Password?</a>
+                </div>
+
+                <input type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md">
+              </div>
+
+              <div class="mt-6">
+                <button
+                  class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600">
+                  Login
+                </button>
+              </div>
+            </form>
+
+            <div class="flex items-center justify-between mt-4">
+              <span class="w-1/5 lg:w-1/5"></span>
+
+              <a href="#" class="text-xs text-center text-gray-400 uppercase hover:underline">
+                or login with Social Media
+              </a>
+
+              <span class="w-1/5 lg:w-1/5"></span>
+            </div>
+
+            <div class="flex items-center mt-6 -mx-2">
+              <button type="button"
+                class="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-300 transform bg-[#456fff] rounded-md hover:bg-blue-400">
+                <svg class="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z">
+                  </path>
+                </svg>
+
+                <span class="hidden mx-2 sm:inline">Sign in with Google</span>
+              </button>
+
+              <button type="button"
+                class="flex items-center justify-center mx-1 text-sm font-medium text-white transition-colors duration-300 transform bg-[#456fff] rounded-md hover:bg-blue-400">
+                <svg class="p-2 w-9 h-9 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+
+            <p class="mt-8 text-xs font-light text-center text-gray-300"> Don't have an account? <a href="#"
+                class="font-medium text-gray-500 hover:underline">Create One</a></p>
+          </div>
+        </label>
+      </label>
+      <label for="my-modal-5" class="btn modal-button">Try for free <span
+          class="animate-ping w-4 h-4 bg-white/75 rounded-full absolute top-2 right-[34px]"></span>
+        <span class="w-3 h-3 bg-white rounded-full absolute top-2.5 right-9"></span></label>
+      <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+      <label for="my-modal-5" class="modal cursor-pointer">
+        <label class="modal-box relative bg-black/[0.85]">
+          <label for="my-modal-5" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+          <img class="mx-auto" src="./assets/Pensil.svg" alt="">
+          <h2 class="text-3xl px-5 mt-8 tracking-tight text-gray-300 xl:text-4xl ">
+            Join us and get the update from anywhere
+          </h2>
+
+          <div class="mt-12 lg:mt-0 ">
+            <div class="flex flex-col space-y-3 mt-6 mb-2 w-full sm:space-y-0 sm:flex-row sm:-mx-2 justify-center">
+              <input id="email" type="text"
+                class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                placeholder="Email Address">
+
+              <button
+                class="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#456fff] rounded-md focus:ring focus:ring-blue-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </label>
+      </label>
+
+    </div>
+    <div class="flex-1"></div>
+    <img draggable="false" class="mr-5 w-28 md:w-36 lg:hidden" src="./assets/Pensil.svg" alt="pensil">
+  </div>
+  <img draggable="false" src="./assets/top.png" alt="" class="bg-cover">
+
+
+  <!-- Welcome -->
+  <section class="mt-32 md:mt-10 lg:mt-20 xl:mt-0">
+    <div class="flex text-4xl lg:my-auto lg:mt-[-50px] justify-center">
+      <h1 class="pt-1 text-gray-400"> Welcome To </h1><svg width="153" height="60" viewBox="40 0 153 60" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M56.0786 43.4817H50.8334V14.9566H52.0922L54.1712 17.4446C54.6417 16.9946 55.1567 16.5703 55.7161 16.1717C56.2756 15.7731 56.8542 15.4324 57.4518 15.1495C58.0622 14.8537 58.6919 14.6224 59.3403 14.4552C59.9888 14.288 60.6436 14.2044 61.3047 14.2044C62.7414 14.2044 64.0896 14.4681 65.3479 14.9952C66.6195 15.5095 67.726 16.2424 68.6667 17.1939C69.6208 18.1454 70.3704 19.2961 70.9177 20.6462C71.4643 21.9834 71.7376 23.4685 71.7376 25.1015C71.7376 26.7987 71.4643 28.3287 70.9177 29.6917C70.3704 31.0418 69.6208 32.1926 68.6667 33.144C67.726 34.0826 66.6195 34.8027 65.3479 35.3041C64.0896 35.8056 62.7414 36.0563 61.3047 36.0563C60.8466 36.0563 60.3892 36.0049 59.9312 35.902C59.4864 35.7991 59.041 35.6642 58.5963 35.497C58.1639 35.317 57.7315 35.1177 57.2993 34.8991C56.8796 34.6805 56.4727 34.4555 56.0786 34.2241V43.4817ZM66.5113 25.1015C66.5113 24.2271 66.3715 23.4428 66.0919 22.7485C65.8249 22.0541 65.456 21.4691 64.986 20.9934C64.5153 20.5048 63.9624 20.1319 63.3266 19.8748C62.6908 19.6176 62.0163 19.489 61.3047 19.489C60.5923 19.489 59.9185 19.6176 59.2827 19.8748C58.6595 20.1319 58.113 20.5048 57.6425 20.9934C57.1721 21.4691 56.7969 22.0541 56.5172 22.7485C56.2502 23.4428 56.1167 24.2271 56.1167 25.1015C56.1167 25.9372 56.2502 26.7022 56.5172 27.3966C56.7969 28.0909 57.1721 28.6824 57.6425 29.1709C58.113 29.6596 58.6595 30.0389 59.2827 30.3089C59.9185 30.5789 60.5923 30.7139 61.3047 30.7139C62.0163 30.7139 62.6908 30.5789 63.3266 30.3089C63.9624 30.0389 64.5153 29.6596 64.986 29.1709C65.456 28.6824 65.8249 28.0909 66.0919 27.3966C66.3715 26.7022 66.5113 25.9372 66.5113 25.1015ZM82.762 30.5596C82.9658 30.6239 83.1688 30.6689 83.3726 30.6946C83.5756 30.7074 83.7793 30.7139 83.9824 30.7139C84.491 30.7139 84.9807 30.6432 85.4514 30.5018C85.9221 30.3603 86.3605 30.161 86.7673 29.9039C87.1867 29.6338 87.5556 29.3124 87.8738 28.9395C88.204 28.5538 88.471 28.1295 88.6747 27.6666L92.4896 31.5432C92.0063 32.2375 91.447 32.8611 90.8112 33.4141C90.188 33.9669 89.5073 34.4362 88.7703 34.822C88.0453 35.2077 87.276 35.497 86.4624 35.6899C85.6608 35.8956 84.8346 35.9985 83.9824 35.9985C82.5457 35.9985 81.1918 35.7285 79.9202 35.1884C78.6612 34.6484 77.5547 33.8962 76.6014 32.9319C75.6606 31.9675 74.9166 30.8232 74.37 29.4988C73.8228 28.1616 73.5495 26.6958 73.5495 25.1015C73.5495 23.4685 73.8228 21.977 74.37 20.627C74.9166 19.2769 75.6606 18.1261 76.6014 17.1746C77.5547 16.2231 78.6612 15.4838 79.9202 14.9566C81.1918 14.4295 82.5457 14.1658 83.9824 14.1658C84.8346 14.1658 85.6678 14.2687 86.4814 14.4744C87.2949 14.6802 88.0642 14.9759 88.7893 15.3616C89.5269 15.7474 90.2133 16.2231 90.8492 16.7888C91.485 17.3418 92.0442 17.9654 92.5275 18.6597L82.762 30.5596ZM85.4325 19.7011C85.1908 19.6111 84.9491 19.5533 84.7074 19.5276C84.4784 19.5019 84.2367 19.489 83.9824 19.489C83.2707 19.489 82.597 19.624 81.9611 19.894C81.338 20.1512 80.7914 20.5241 80.3207 21.0126C79.8626 21.5013 79.5008 22.0927 79.2331 22.7871C78.9662 23.4685 78.8327 24.24 78.8327 25.1015C78.8327 25.2943 78.839 25.5129 78.8516 25.7572C78.8776 26.0015 78.9092 26.2523 78.9472 26.5094C78.9985 26.7537 79.0554 26.9915 79.1193 27.223C79.1825 27.4544 79.2654 27.6602 79.3673 27.8402L85.4325 19.7011ZM100.367 35.6127H95.1593V14.9566H96.4183L98.1353 16.9625C98.9742 16.191 99.9212 15.5995 100.977 15.1881C102.045 14.7637 103.158 14.5516 104.315 14.5516C105.561 14.5516 106.737 14.7959 107.843 15.2845C108.95 15.7602 109.916 16.4224 110.743 17.271C111.569 18.1068 112.217 19.0904 112.688 20.2219C113.171 21.3406 113.412 22.5363 113.412 23.8093V35.6127H108.206V23.8093C108.206 23.2692 108.104 22.7613 107.901 22.2856C107.697 21.797 107.417 21.3727 107.061 21.0126C106.705 20.6527 106.292 20.3698 105.821 20.164C105.351 19.9583 104.849 19.8554 104.315 19.8554C103.768 19.8554 103.253 19.9583 102.77 20.164C102.287 20.3698 101.867 20.6527 101.511 21.0126C101.155 21.3727 100.875 21.797 100.672 22.2856C100.469 22.7613 100.367 23.2692 100.367 23.8093V35.6127ZM128.347 35.6127H116.445V30.3667H128.347C128.703 30.3667 129.008 30.2381 129.263 29.981C129.517 29.7239 129.644 29.4153 129.644 29.0552C129.644 28.6824 129.517 28.4381 129.263 28.3223C129.008 28.2066 128.703 28.1488 128.347 28.1488H122.931C122.028 28.1488 121.182 27.9752 120.394 27.628C119.605 27.2809 118.918 26.8116 118.334 26.2201C117.749 25.6158 117.285 24.915 116.941 24.1178C116.61 23.3206 116.445 22.4656 116.445 21.5527C116.445 20.6398 116.61 19.7848 116.941 18.9875C117.285 18.1904 117.749 17.4961 118.334 16.9046C118.918 16.3132 119.605 15.8502 120.394 15.5159C121.182 15.1688 122.028 14.9952 122.931 14.9952H133.478V20.2412H122.931C122.574 20.2412 122.269 20.3698 122.014 20.627C121.76 20.8841 121.633 21.1927 121.633 21.5527C121.633 21.9256 121.76 22.247 122.014 22.517C122.269 22.7742 122.574 22.9028 122.931 22.9028H128.347C129.237 22.9028 130.076 23.0571 130.865 23.3656C131.653 23.6614 132.34 24.0792 132.924 24.6193C133.51 25.1593 133.973 25.8086 134.317 26.5673C134.66 27.3258 134.832 28.1552 134.832 29.0552C134.832 29.9682 134.66 30.8232 134.317 31.6204C133.973 32.4047 133.51 33.0991 132.924 33.7033C132.34 34.2948 131.653 34.7641 130.865 35.1112C130.076 35.4456 129.237 35.6127 128.347 35.6127ZM143.758 9.34416C143.758 9.83279 143.663 10.2892 143.472 10.7136C143.294 11.1378 143.046 11.5107 142.729 11.8322C142.41 12.1408 142.035 12.3915 141.603 12.5844C141.184 12.7644 140.732 12.8543 140.249 12.8543C139.766 12.8543 139.308 12.7644 138.876 12.5844C138.456 12.3915 138.087 12.1408 137.769 11.8322C137.464 11.5107 137.216 11.1378 137.025 10.7136C136.847 10.2892 136.758 9.83279 136.758 9.34416C136.758 8.86847 136.847 8.41842 137.025 7.99408C137.216 7.55696 137.464 7.18406 137.769 6.87546C138.087 6.55406 138.456 6.30329 138.876 6.12327C139.308 5.93046 139.766 5.83398 140.249 5.83398C140.732 5.83398 141.184 5.93046 141.603 6.12327C142.035 6.30329 142.41 6.55406 142.729 6.87546C143.046 7.18406 143.294 7.55696 143.472 7.99408C143.663 8.41842 143.758 8.86847 143.758 9.34416ZM142.862 35.6127H137.617V14.9566H142.862V35.6127ZM152.093 35.6127H146.848V6.74048H152.093V35.6127Z"
+          fill="#456fff" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="my-auto mb-52">
+    <div class="hero-containt my-auto ">
+      <div class="static-txt text-6xl pt-4">Let's</div>
+      <ul class="dynamic-txts">
+        <li><span class="create text-cursorpin">Create</span></li>
+        <li><span class="connect text-cursorpin">Connect</span></li>
+        <li><span class="build text-cursorpin">Build</span></li>
+        <li><span class="share text-cursorpin">Share</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+  <!-- One platform for all your community needs -->
+  <section>
+    <div class="mx-auto text-center  lg:mt-[-30px]"><a href="#main"> <i
+          class="animate-bounce fa-solid fa-angle-down fa-3x"></i></a></div>
+    <div id="main"
+      class="container mx-auto flex flex-col items-center px-4 text-center  md:px-10 lg:px-0  xl:max-w-3xl ">
+      <h1 data-aos="fade-up"
+        class="text-4xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold leading-none sm:text-5xl md:text-6xl mt-40 md:mt-28">
+        One platform for all your community needs
+      </h1>
+      <p data-aos="fade-up" class="px-8 mt-8 mb-0 text-3xl text-gray-400 "><a href="https://app.pensil.in/"
+          class="hover:text-[#056799] transition duration-300 ease-out hover:ease-in"> Try for free <i
+            class="fa-solid fa-chevron-right"></i></a></p>
+
+    </div>
+  </section>
+
+
+  <!-- Main Section / Hero Section-->
+  <section class="mt-10 bg-herobg bg-cover lg:mt-60">
+
+
+    <!-- Pensil Video -->
+    <video autoplay="autoplay" loop="true" muted defaultmuted
+      class="mx-auto mb-[8%] w-[80%] rounded-[25px] opacity-90 lg:w-[65%]" src="./assets/hero1.mp4"></video>
+
+
+
+    <!-- Company Partners -->
+    <section class="slider-1">
+      <div class="slide-track-1">
+        <div class="slide">
+          <img src="./assets/carousel.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel8.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel9.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="./assets/carousel10.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Improve retention, growth and advocacy -->
+    <section class="mt-36">
+      <div data-aos="fade-up" class="container mx-auto flex flex-col items-center  px-4  text-center   xl:max-w-6xl ">
+        <h1
+          class="lg:leading-
+           text-2xl h-full font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-[#4154ff] to-[#46c7e3] font-semibold  sm:text-5xl md:text-5xl">
+          Improve retention, growth and advocacy with the all-in-one community engagement platform
+
+        </h1>
+      </div>
+    </section>
+
+
+    <!-- Designed for all usecases -->
+    <section class="text-gray-600 body-font py-10 lg:py-0">
+      <div class="container px-5  mx-auto flex flex-wrap lg:py-24 lg:px-20">
+        <div data-aos="zoom-in" class="pt-10 lg:pt-0 lg:w-2/3 w-full my-auto h-full  rounded-lg overflow-hidden ">
+          <video autoplay="autoplay" loop="true" muted defaultmuted
+            class="mx-auto w-[80%] rounded-[25px] md:w-[95%] opacity-75 " src="./assets/hero2.mp4 "></video>
+          <img src="./assets/shadow.png" alt="" class="mx-auto w-[100%] pt-2">
+
+        </div>
+        <div data-aos="fade-up"
+          class="flex flex-col flex-wrap mt-10 lg:my-auto lg:py-0 mb-10 h-full lg:w-1/3 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 my-auto lg:items-start items-center">
+            <h1 class="text-4xl my-5 text-white">Designed for all usecases
+              <h2 class="lg:text-xl text-gray-500">From open discussion to gated content. Create different groups for
+                all kind of use case, like coaching, mentoring, courses, forums, live classes etc
+                Replaces</h2>
+              <h3 class="text-xl text-gray-200 mt-5"><span class="text-lg text-gray-400">Replaces</span> <br> Slack OR
+                Discord OR Forum</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Your Community. Your Branding. -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-5 mb-10 mx-auto flex flex-wrap lg:py-24 lg:px-20">
+        <div data-aos="fade-up"
+          class="flex flex-col flex-wrap mt-10 lg:order-first lg:my-auto lg:py-0 mb-10 h-full lg:w-1/3 lg:pl-12 lg:text-left text-center">
+          <div class="flex flex-col mb-10 my-auto lg:items-start items-center">
+            <h1 class="text-4xl my-5 text-white">Your Community. Your Branding.
+              <h2 class="lg:text-xl text-gray-500">Design your community to match your branding. Make it feel like
+                your
+                own product with complete customization & integration, including mobile app</h2>
+              <h3 class="text-xl text-gray-200 mt-5"><span class="text-lg text-gray-400">Avoids</span> <br>
+                Custom development</h3>
+          </div>
+        </div>
+        <div data-aos="zoom-in" class="order-first lg:w-2/3 w-[full] my-auto h-full  rounded-lg overflow-hidden ">
+          <video autoplay="autoplay" loop="true" muted defaultmuted
+            class="mx-auto w-[80%] rounded-[25px] md:w-[95%] opacity-75 " src="./assets/video.mp4 "></video>
+          <img src="./assets/shadow.png" alt="" class="mx-auto w-[100%] pt-2">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Live Sessions -->
+    <section class="my-28">
+      <h1 data-aos="fade-up" class="mx-auto text-center text-4xl font-semibold"><span class="animate-pulse">🔴</span>
+        Live Sessions</h1>
+      <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
+        <img class="opacity-70 w-[95%] lg:w-[70%]" src="./assets/videocall.png" alt="conference">
+        <div data-aos="fade-up" class="block lg:flex flex-wrap mx-10 lg:mx-36">
+          <div class="p-4 w-1/1 lg:w-1/3">
+            <div class="flex rounded-lg h-full py-5 flex-col">
+              <div class="flex items-center mb-3">
+                <h2 class="text-2xl text-white font-medium">Immersive Experince</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed lg:text-lg text-gray-500">Conduct Live sessions or webinar, get the best
+                  audio
+                  video quality</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-1/1 lg:w-1/3">
+            <div class="flex rounded-lg h-full py-5 flex-col">
+              <div class="flex items-center mb-3">
+                <h2 class="text-2xl text-white font-medium">Host Event with Live QnA</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed lg:text-lg text-gray-500">Invite hosts, moderator & get the best live
+                  experience for your commmunity</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-1/1 lg:w-1/3">
+            <div class="flex rounded-lg h-full py-5 flex-col">
+              <div class="flex items-center mb-3">
+                <h2 class="text-2xl text-white font-medium">Share your live recordings</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed lg:text-lg text-gray-500">Share or post recording on Youtube, Facebook,
+                  Vimeo,
+                  or any other platform</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Founder  -->
+    <section class="text-white-300 bg-super  bg-contain bg-no-repeat my-0">
+      <div class="px-5 py-10 md:py-24 mx-auto bg-black/[0.3] ">
+        <div class="lg:w-5/6 flex flex-col md:flex-row sm:items-center items-start mx-auto">
+          <h1 data-aos="fade-up"
+            class="flex-grow text-xl sm:pr-16 md:text-2xl text-gray-300 sm:order-last md:order-first">"I like to make
+            videos related to code and tech in my free time. I also lead a few tech teams in startups, help in hiring
+            talent for companies. I am also on a part time traveller, with 31 countries checked off so far!"</h1>
+          <div data-aos="fade-up"
+            class="flex-shrink-0 text-center text-white border-0 py-2 px-8 focus:outline-none  rounded  mt-10 sm:mt-0 mx-auto my-10 md:my-0 order-first md:order-last">
+            <div class="w-40 mx-auto " data-aos="fade-up">
+              <img class="mask mask-squircle" src="./assets/hiteshsir.jpeg" alt="">
+            </div>
+            <div>
+              <h2 class="text-2xl mt-5">Hitesh Choudhary</h2>
+              <p class="text-gray-500">Advisory Board at <span class="text-gray-400">Pensil</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Mobile app for your community -->
+    <section class="bg-mobile bg-contain bg-no-repeat bg-right  h-screen lg:h-screen ">
+      <div class="flex items-center w-full h-screen bg-black/[0.8] lg:bg-black/[0]">
+        <div class="md:w-1/2 px-20 lg:px-32">
+          <h1 data-aos="fade-up" class="title-font text-4xl md:text-4xl lg:text-5xl mb-4 font-medium text-white">
+            Mobile
+            app for your community</h1>
+          <p data-aos="fade-up" class="mb-8 leading-relaxed text-gray-400 py-2">Get complete custom branded app for
+            you
+            community & give your community the experince they deserve.
+          </p>
+          <a data-aos="fade-up" href="https://www.pensil.in/mobile-app"
+            class="text-gray-400 text-lg border-2 rounded-[10px] border-gray-700 font-bold px-8 py-2 md:px-10 md:py-3 lg:px-12 lg:py-4 hover:border-gray-500 hover:text-white transition duration-300 ease-out hover:ease-in hover:bg-gray-900"
+            target="_blank">
+            Get Mobile App</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Made For Developers, By Developers -->
+    <section class="text-white-300 body-font bg-Developer bg-contain bg-no-repeat bg-right">
+      <div class="bg-black/[0.5] ">
+        <div class="px-10 py-20 mx-auto">
+          <h1 class="sm:text-4xl text-3xl font-medium text-center mb-10 text-white">Made For Developers, By
+            Developers</h1>
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div data-aos="fade-up" class="lg:w-1/2 w-full lg:order-first lg:pr-10 lg:py-6 mb-6 mt-6 lg:mt-0 lg:mb-0">
+              <h2 class="mb-8 text-lg lg:text-xl text-gray-400">From easy integrations to deploy your own front end,
+                we
+                have everything you need
+                to get started. Integrate with our SDKs. Some SDKs may require some additional configuration through
+                your
+                Dev Portal.</h2>
+              <p class=" mt-8 mb-12 text-2xl text-gray-200 "><a href="https://docs.pensil.in/" target="_blank"
+                  class="hover:text-pink-500 transition duration-300 ease-out hover:ease-in"> Explore Docs <i
+                    class="fa-solid fa-chevron-right"></i></a></p>
+            </div>
+            <div data-aos="zoom-in" class="mockup-code order-first bg-bgBlue/[0.8] lg:w-1/2 w-full mx-auto">
+              <pre data-prefix="1"><code class="text-borderColorb">script</code></pre>
+              <pre data-prefix="2"
+                class="text-gray-200"><code class="text-success">&nbsp // Load the SDK asynchronously</code></pre>
+              <pre data-prefix="3"
+                class="text-gray-200"><code>&nbsp (<span class="text-pink-500">function </span>(d, s, id)) {</code></pre>
+              <pre data-prefix="4"
+                class="text-gray-200"><code>&nbsp <span class="text-pink-500">var</span> js, sjs = d.getElementsByTagName(s)[0]</code></pre>
+              <pre data-prefix="5"
+                class="text-gray-200"><code>&nbsp <span class="text-pink-500">if</span> (d.getElementById(id)) <span class="text-pink-500">return</span>;</code></pre>
+              <pre data-prefix="6" class="text-gray-200"><code>&nbsp js = d.createElement(s); js.id = id;</code></pre>
+              <pre data-prefix="7"
+                class="text-gray-200"><code>&nbsp js.src = <span class="text-red-400">"https://sdk.pensil.in/js/v1/create.js"</span>;</code></pre>
+              <pre data-prefix="8" class="text-gray-200"><code>&nbsp sjs.parentNode.insertBefore(js, sjs);</code></pre>
+              <pre data-prefix="9"
+                class="text-gray-200"><code>&nbsp }(document, <span class="text-red-400">'script'</span>, <span class="text-red-400">'pensil-section-sdk'</span>));</code></pre>
+              <pre data-prefix="10"><code class="text-borderColorb">/script</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Clients Section -->
+    <section class="bg-[#0a0d16] pb-20">
+      <div class="px-14 py-10 mx-auto">
+        <h1 data-aos="fade-up" class="font-medium text-center  my-20 text-gray-400 capitalize text-5xl lg:text-6xl ">
+          What our <span class="text-white ">clients</span> say
+        </h1>
+        <section class="mx-auto grid grid-cols-1 gap-8 mt-8 xl:mt-12 md:grid-cols-2 xl:grid-cols-4 xl:mx-10">
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "We use the Pensil platform to interlink all our rural libraries and also to connect city volunteers with
+              students in villages in Rural Lucknow".
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t1.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Anurag Trivedi</h1>
+                <span class="text-sm text-gray-500">Shaan Foundation</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "I love the platform, ❤️❤️.
+              All our students use Pensil for internal communication and academics.
+              It has been awesome working with the Pensil team".
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t2.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Hetal Mundra</h1>
+                <span class="text-sm text-gray-500">Somaiya Design School</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "I run UPSC cohorts on Pensil. It is different from other applications - it is more fun, connects everyone
+              and lets us study together."
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t3.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Abhijeet Yadav</h1>
+                <span class="text-sm text-gray-500">Perlims Focus Group</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "Pensil is super. We were looking to integrate with Circle based out of US but this made us change the
+              game plan."
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t4.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Karan Mehra</h1>
+                <span class="text-sm text-gray-500">Tyke Invest</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "We are building a community for freelancers in the Middle East. Pensil provides a nice little place for
+              us to come together."
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t5.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Abed Mousley</h1>
+                <span class="text-sm text-gray-500">Tapflow.com</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "Love the slick minimalism and easy to use design on the community platform. It has everything one will
+              need."
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t6.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Jon Henson Grič</h1>
+                <span class="text-sm text-gray-500">CyptoTap</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "I like what i see. Pensil has neat sections for different topics and i can make them on my own. Plus
+              in-built video tool is very useful"
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t7.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Sheri Staffiery</h1>
+                <span class="text-sm text-gray-500">theheartway.org</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="p-8 shadow-md rounded-3xl shadow-gray-700">
+            <p data-aos="fade-up" class="leading-loose text-gray-200">
+              "I love Pensil, This is great. Good to see world class product coming from India. Keep growing"
+            </p>
+            <div class="flex items-center mt-8 -mx-2">
+              <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-700 " src="./assets/t8.png"
+                alt="">
+              <div class="mx-2">
+                <h1 class="font-semibold text-gray-300">Lalit Tyagi</h1>
+                <span class="text-sm text-gray-500">brightdirectories.com</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- Blog Section -->
+    <section class="text-white-300 body-font ">
+      <div class="container px-5 py-28  mx-auto">
+        <section class="text-gray-600 body-font">
+          <div class=" px-0 flex flex-col sm:flex-row sm:items-center justify-around items-start mx-auto">
+            <h1 data-aos="fade-up" class=" text-5xl lg:text-6xl font-medium text-center mb-10 text-white mx-auto">
+              Community
+              Blogs</h1>
+          </div>
+          <div class=" px-0 py-10">
+            <div class="flex flex-wrap mb-10 justify-center gap-16 text-center">
+              <div data-aos="fade-up"
+                class="transition duration-200 ease-out  w-2/2 hover:ease-in hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-l-purple-600/[0.6] lg:hover:border-t-pink-500/[0.6]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack transition ease-in-out delay-150 hover:-translate-y-2">
+                <div class=" w-full overflow-hidden flex justify-center">
+                  <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                    src="./assets/c1.jpg">
+                </div>
+                <h2 class="text-2xl font-medium text-gray-300 mt-6 mb-6">WhatsApp Groups : The Worst
+                  Platform To Host Your Online Community. Here's Why!</h2>
+                <p class="leading-relaxed mt-5 text-gray-400">A WhatsApp group text is great for family or friends,
+                  but
+                  as
+                  a Community Platform, it's hard to see how it works.Let's take a deeper look at the problems in
+                  hosting your community on a WhatsApp Group.
+                </p>
+              </div>
+              <div data-aos="fade-up"
+                class="transition duration-200 ease-out hover:ease-in w-2/2  hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:hover:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-r-borderColorp/[0.7] lg:hover:border-t-borderColorb/[0.7]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack transition ease-in-out delay-150 hover:-translate-y-2">
+                <div class=" w-full overflow-hidden flex justify-center">
+                  <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                    src="./assets/c2.jpg">
+                </div>
+                <h2 class="text-2xl font-medium text-gray-300 mt-6 mb-6">Life of a community ops manager
+                </h2>
+                <p class="leading-relaxed mt-5 text-gray-400">Community operations enable CMs to operate the vehicle
+                  and
+                  ensure that it stays on the road by making sure all of the gears are the proper size, greased,
+                  screwed in correctly, and linked to the proper circuits.</p>
+              </div>
+              <div data-aos="fade-up"
+                class="transition duration-200 ease-out hover:ease-in w-2/2 hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-l-purple-600/[0.6] lg:hover:border-b-pink-500/[0.6]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack transition ease-in-out delay-150 hover:-translate-y-2">
+                <div class=" w-full overflow-hidden flex justify-center">
+                  <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                    src="./assets/c3.jpg">
+                </div>
+                <h2 class="text-2xl font-medium text-gray-300 mt-6 mb-6">Community management as career
+                </h2>
+                <p class="leading-relaxed mt-5 text-gray-400">Transitioning from "in-the-weeds" labour to more
+                  high-level,
+                  strategic work is a typical issue for community leaders.</p>
+              </div>
+              <div data-aos="fade-up"
+                class="transition duration-200 ease-out hover:ease-in w-2/2 hover:border-l-borderColorp/[0.7] border-bgBlack hover:border-b-borderColorb/[0.7]  border-2  lg:hover:border-bgBlack lg:hover:border-b-bgBlack lg:hover:border-r-borderColorp/[0.7] lg:hover:border-b-borderColorb/[0.7]  lg:w-4/12  rounded-[30px] p-4 bg-bgBlack transition ease-in-out delay-150 hover:-translate-y-2">
+                <div class=" w-full overflow-hidden flex justify-center">
+                  <img alt="content" class="object-cover object-center rounded-[20px] h-full w-full"
+                    src="./assets/c4.jpg">
+                </div>
+                <h2 class="text-2xl font-medium text-gray-300 mt-6 mb-6">Why Discord Is NOT The Best Tool
+                  For Your Community/Online Course</h2>
+                <p class="leading-relaxed mt-5 text-gray-400">From voice notes and scheduling to managing chats and
+                  forums
+                  - there are a lot of issues associated with using Discord for community building.</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="w-full text-center">
+            <a href="https://www.pensil.in/blog"
+              class="mx-auto text-gray-400 text-lg border-2 rounded-[10px] border-gray-700 px-12 py-4 font-bold hover:border-gray-500 hover:text-white transition duration-300 ease-out hover:ease-in"
+              target="_blank">Read More</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- Get in Touch -->
+    <section>
+      <div class="px-10 mt-36 lg:mt-32 lg:px-0 mx-auto">
+        <div class="flex flex-col text-center w-full  ">
+          <h1 data-aos="fade-up" class=" text-5xl lg:text-6xl font-medium text-center mb-10 text-white">Get
+            in
+            touch
+          </h1>
+          <p data-aos="fade-up" class="xl:w-2/4 lg:w-3/4 mx-auto mb-5 text-lg lg:text-xl text-gray-400">Interested in
+            exploring our product
+            and services on a demo, getting a quote or do you just want to send an email?</p>
+        </div>
+        <div class="flex flex-wrap mx-4">
+          <div class="p-4 md:w-1/3">
+            <a href="https://www.pensil.in/contact" class="">
+              <div data-aos="fade-up"
+                class="flex rounded-lg h-full hover:bg-gray-800 cursor-pointer bg-gray-800 cursor-pointer bg-gray-800/[0.3] p-8 flex-col hover:transition hover:ease-in-out hover:delay-80">
+                <div class="flex items-center mb-3">
+                  <div class="w-20 h-20 mr-3 inline-flex items-center justify-center  flex-shrink-0">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.2"
+                        d="M16 4C13.6266 4 11.3066 4.70379 9.33316 6.02236C7.35977 7.34094 5.8217 9.21509 4.91345 11.4078C4.0052 13.6005 3.76756 16.0133 4.23058 18.3411C4.6936 20.6689 5.83649 22.8071 7.51472 24.4853C9.19295 26.1635 11.3312 27.3064 13.6589 27.7694C15.9867 28.2324 18.3995 27.9948 20.5922 27.0866C22.7849 26.1783 24.6591 24.6402 25.9776 22.6668C27.2962 20.6935 28 18.3734 28 16C28 14.4241 27.6896 12.8637 27.0866 11.4078C26.4835 9.95189 25.5996 8.62902 24.4853 7.51472C23.371 6.40041 22.0481 5.5165 20.5922 4.91344C19.1363 4.31039 17.5759 4 16 4V4ZM16 23C14.6155 23 13.2622 22.5895 12.111 21.8203C10.9599 21.0511 10.0627 19.9579 9.53285 18.6788C9.00304 17.3997 8.86441 15.9922 9.13451 14.6344C9.40461 13.2765 10.0713 12.0292 11.0503 11.0503C12.0292 10.0713 13.2765 9.4046 14.6344 9.1345C15.9922 8.86441 17.3997 9.00303 18.6788 9.53284C19.9579 10.0627 21.0511 10.9599 21.8203 12.111C22.5895 13.2622 23 14.6155 23 16C23 17.8565 22.2625 19.637 20.9497 20.9497C19.637 22.2625 17.8565 23 16 23Z"
+                        fill="#2B95FF" />
+                      <path
+                        d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M16 23C19.866 23 23 19.866 23 16C23 12.134 19.866 9 16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23Z"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M16 9V4" stroke="#2B95FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M11.0502 11.0502L7.51465 7.51465" stroke="#2B95FF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M9 16H4" stroke="#2B95FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M11.0502 20.9497L7.51465 24.4852" stroke="#2B95FF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M16 23V28" stroke="#2B95FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M20.9497 20.9497L24.4852 24.4852" stroke="#2B95FF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M23 16H28" stroke="#2B95FF" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M20.9497 11.0502L24.4852 7.51465" stroke="#2B95FF" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-2xl text-white font-medium mt-7 my-5">Request a demo</h2>
+                  <p class="leading-relaxed lg:text-lg text-gray-500">Book time in our calendar to learn more about our
+                    product and services.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <a href="https://www.pensil.in/contact">
+              <div data-aos="fade-up"
+                class="flex rounded-lg h-full hover:bg-gray-800 cursor-pointer bg-gray-800 cursor-pointer bg-gray-800/[0.3] p-8 flex-col hover:transition hover:ease-in-out hover:delay-80">
+                <div class="flex items-center mb-3">
+                  <div class="w-20 h-20 mr-3 inline-flex items-center justify-center  flex-shrink-0">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.2"
+                        d="M4.58384 21.6312L7.60725 4.48456C7.6533 4.22337 7.80123 3.99118 8.01848 3.83906C8.23573 3.68693 8.50452 3.62735 8.7657 3.6734L15.6594 4.88894C15.9205 4.93499 16.1527 5.08292 16.3049 5.30017C16.457 5.51742 16.5166 5.78621 16.4705 6.04739L13.4317 23.2815C13.2271 24.4419 12.5755 25.4757 11.6169 26.161C10.6584 26.8462 9.46933 27.1281 8.30518 26.9462C5.81234 26.5556 4.14568 24.1161 4.58384 21.6312Z"
+                        fill="#2B95FF" />
+                      <path
+                        d="M8.99976 24C9.82818 24 10.4998 23.3284 10.4998 22.5C10.4998 21.6716 9.82818 21 8.99976 21C8.17133 21 7.49976 21.6716 7.49976 22.5C7.49976 23.3284 8.17133 24 8.99976 24Z"
+                        fill="#2B95FF" />
+                      <path
+                        d="M4.58384 21.6312L7.60725 4.48456C7.6533 4.22337 7.80123 3.99118 8.01848 3.83906C8.23573 3.68693 8.50452 3.62735 8.7657 3.6734L15.6594 4.88894C15.9205 4.93499 16.1527 5.08292 16.3049 5.30017C16.457 5.51742 16.5166 5.78621 16.4705 6.04739L13.4317 23.2815C13.2271 24.4419 12.5755 25.4757 11.6169 26.161C10.6584 26.8462 9.46933 27.1281 8.30518 26.9462C5.81234 26.5556 4.14568 24.1161 4.58384 21.6312Z"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M14.7851 15.6055L23.9055 12.2859C24.1547 12.1952 24.4298 12.2072 24.6701 12.3193C24.9105 12.4314 25.0965 12.6343 25.1872 12.8836L27.5814 19.4614C27.6263 19.5848 27.6464 19.7159 27.6407 19.8471C27.635 19.9782 27.6035 20.107 27.548 20.2261C27.4925 20.3451 27.4141 20.452 27.3173 20.5407C27.2204 20.6294 27.1071 20.6982 26.9837 20.7431L10.5391 26.7285"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M27.5 20.3167V26C27.5 26.2652 27.3946 26.5196 27.2071 26.7071C27.0196 26.8947 26.7652 27 26.5 27H9"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-2xl text-white font-medium mt-7 my-5">Get a quote</h2>
+                  <p class="leading-relaxed lg:text-lg text-gray-500">Fill out information about your use-case and
+                    request
+                    a quote from us.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <a href="https://www.pensil.in/contact">
+              <div data-aos="fade-up"
+                class="flex rounded-lg h-full hover:bg-gray-800 cursor-pointer bg-gray-800/[0.3] p-8 flex-col hover:transition hover:ease-in-out hover:delay-80">
+                <div class="flex items-center mb-3">
+                  <div class="w-20 h-20 mr-3 inline-flex items-center justify-center  flex-shrink-0">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.2"
+                        d="M11.7573 23.0711C10.3431 27.3137 4.68628 27.3137 4.68628 27.3137C4.68628 27.3137 4.68628 21.6569 8.92892 20.2427L11.7573 23.0711Z"
+                        fill="#2B95FF" />
+                      <path opacity="0.2"
+                        d="M23.0711 14.5857V22.6568C23.0711 22.7881 23.0452 22.9181 22.9949 23.0394C22.9447 23.1608 22.871 23.271 22.7782 23.3639L18.7355 27.4066C18.6075 27.5346 18.4471 27.6254 18.2716 27.6694C18.096 27.7135 17.9118 27.709 17.7386 27.6566C17.5653 27.6041 17.4096 27.5056 17.2879 27.3716C17.1663 27.2376 17.0833 27.0731 17.0478 26.8956L16 21.6568L23.0711 14.5857Z"
+                        fill="#2B95FF" />
+                      <path opacity="0.2"
+                        d="M17.4143 8.92896H9.34326C9.21194 8.92895 9.0819 8.95482 8.96057 9.00508C8.83925 9.05533 8.72901 9.12899 8.63615 9.22185L4.59343 13.2646C4.46544 13.3926 4.37459 13.5529 4.33057 13.7284C4.28654 13.904 4.29099 14.0882 4.34345 14.2615C4.3959 14.4347 4.49438 14.5904 4.6284 14.7121C4.76241 14.8338 4.92694 14.9168 5.10442 14.9523L10.3433 16L17.4143 8.92896Z"
+                        fill="#2B95FF" />
+                      <path
+                        d="M11.7573 23.0711C10.3431 27.3137 4.68628 27.3137 4.68628 27.3137C4.68628 27.3137 4.68628 21.6569 8.92892 20.2427"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M24.4854 13.1715L16.0001 21.6568L10.3433 15.9999L18.8285 7.51466C22.0416 4.30164 25.2546 4.33298 26.6248 4.53743C26.8358 4.56888 27.0311 4.66727 27.182 4.8181C27.3328 4.96894 27.4312 5.16423 27.4626 5.37521C27.6671 6.74548 27.6984 9.9585 24.4854 13.1715Z"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M23.0711 14.5857V22.6568C23.0711 22.7881 23.0452 22.9181 22.9949 23.0394C22.9447 23.1608 22.871 23.271 22.7782 23.3639L18.7355 27.4066C18.6075 27.5346 18.4471 27.6254 18.2716 27.6694C18.096 27.7135 17.9118 27.709 17.7386 27.6566C17.5653 27.6041 17.4096 27.5056 17.2879 27.3716C17.1663 27.2376 17.0833 27.0731 17.0478 26.8956L16 21.6568"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M17.4143 8.92896H9.34326C9.21194 8.92895 9.0819 8.95482 8.96057 9.00508C8.83925 9.05533 8.72901 9.12899 8.63615 9.22185L4.59343 13.2646C4.46544 13.3926 4.37459 13.5529 4.33057 13.7284C4.28654 13.904 4.29099 14.0882 4.34345 14.2615C4.3959 14.4347 4.49438 14.5904 4.6284 14.7121C4.76241 14.8338 4.92694 14.9168 5.10442 14.9523L10.3433 16"
+                        stroke="#2B95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h2 class="text-2xl text-white font-medium mt-7 my-5">Email sales</h2>
+                  <p class="leading-relaxed lg:text-lg text-gray-500 ">
+                    Contact our Sales team with any questions or query you might have.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQs -->
+    <section class="text-gray-700 mt-20">
+      <div class="container px-5 pt-24 pb-20 lg:pb-10 mx-auto">
+        <div class=" px-0 flex flex-col sm:flex-row sm:items-center justify-around items-start mx-auto">
+          <h1 data-aos="fade-up" class=" text-5xl lg:text-6xl font-medium text-center mb-10 text-white">
+            Frequently
+            Asked Question</h1>
+        </div>
+        <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+          <div class="w-full px-4 py-2">
+
+            <!-- 1 -->
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  What is Pensil?
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                Pensil is a community-based learning and engaging platform. With Pensil, people can come together for
+                shared interests, values, beliefs, or causes. Pensil keeps conversations organized by Groups You can
+                host
+                the discussion, files, and anything you want to share with your audience.
+              </p>
+            </details>
+            <!-- 2 -->
+
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  What is Community?
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                A <b>community</b> is a <b>social unit</b> with commonalities such as <b>norms</b>, <b>religion</b>,
+                <b>values</b>, <b>customs</b>, or <b>identity</b>. Communities may share a sense of place situated in a
+                given geographical area or in virtual space through communication platforms. People can come together
+                for
+                shared interests, values, beliefs, or causes.
+              </p>
+            </details>
+
+            <!-- 3 -->
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  How to create a New Group
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                A Group is a space where you can add multiple sections, depending on what you want to use these sections
+                for.
+                <br>
+                - <b>Open and Free For Everyone</b> - Anyone with your community URL will be able to see the sections
+                and
+                content inside them.<br>
+                - <b>Closed and Free For Everyone</b> - Users will be able to Request Access to this group. This Request
+                needs to be approved by the Community Admin.<br>
+                - <b>Paid Group</b> - Community Admin can decide a price tag for access to the group. Users have to
+                first
+                make payments to access such groups.
+              </p>
+            </details>
+
+            <!-- 4 -->
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  How to create a Post Section
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                A <b>Posts type</b> section is where you can put individual posts and other users can comment or upvote.
+                <br>
+                - This type of section is most beneficial for:
+                <br>
+                - Organizing important conversation topics
+                Publishing content you want users to notice.
+              </p>
+            </details>
+
+            <!-- 5 -->
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  How to create a Chat Section
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                A <b>Chat section</b> is designed to enable real-time conversations between the community members.
+              </p>
+            </details>
+
+            <!-- 6 -->
+            <details data-aos="fade-up" class="px-6 mb-4 bg-gray-800 rounded-md group">
+              <summary class="flex items-center justify-between cursor-pointer">
+                <h5 class="font-semibold text-gray-300 rounded-md py-2 px-0">
+                  How to upload PDF and other documents
+                </h5>
+                <span class="flex-shrink-0 m-1 text-gray-300 rounded-full sm:p-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="flex-shrink-0 w-5 h-5 transition duration-300 group-open:-rotate-45" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-2 pb-2 leading-relaxed bg-transparent text-white">
+                Uploading any type of document on the Pensil communities is super simple:
+                <br>
+                - Click on <b>Attachment</b>
+                Select the File you want to upload
+                <br>
+                - Click on <b>Post</b> button at the top
+                Viola!
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- Main Image -->
+  <img draggable="false" src="./assets/bottom.png" alt="">
+
+
+  <!-- footer -->
+  <footer class="text-gray-600 body-font bg-black">
+    <div
+      class="container  py-24 mx-auto flex md:px-36 md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="#" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img draggable="false" src="./assets/Pensil.svg" alt="logo" class="h-full w-88">
+        </a>
+        <p class="mt-2 text-sm text-gray-500">© Pensil. All Rights Reserved.</p>
+        <p class="mt-2 text-lg text-gray-500">Made with <span
+            class="animate-[pulse_0.9s_ease-in-out_infinite]">❤️</span> from India</p>
+        <p class="mt-5"><a href="https://www.pensil.in/privacy-policy"
+            class="mt-2 text-sm text-gray-600 hover:text-gray-700">Privacy Policy</a></p>
+        <p><a href="https://www.pensil.in/terms-conditions" class="mt-2 text-sm text-gray-600 hover:text-gray-700">Terms
+            & Conditions</a></p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full w-1/2 px-4 ">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Pensil</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="https://app.pensil.in/" class="text-gray-600 hover:text-gray-700">Try For Free</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/mobile-app" class="text-gray-600 hover:text-gray-700">Mobile App</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/product" class="text-gray-600 hover:text-gray-700">Product Overview</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/pricing" class="text-gray-600 hover:text-gray-700">Pricing</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/demo-form" class="text-gray-600 hover:text-gray-700">Watch Demo</a>
+            </li>
+            <li>
+              <a href="mailto:founders@pensil.in" class="text-gray-600 hover:text-gray-700">Email Us</a>
+            </li>
+          </nav>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full w-1/2 px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Resources</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="https://team.pensil.in/g/pensil/s/updates" class="text-gray-600 hover:text-gray-700">Updates</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/blog" class="text-gray-600 hover:text-gray-700">Blog</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/integration" class="text-gray-600 hover:text-gray-700">Integration</a>
+            </li>
+            <li>
+              <a href="https://pensil.canny.io/" class="text-gray-600 hover:text-gray-700">Roadmap</a>
+            </li>
+            <li>
+              <a href="https://team.pensil.in/" class="text-gray-600 hover:text-gray-700">Pensil Community</a>
+            </li>
+          </nav>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full w-1/2 px-4">
+          <h2 class="title-font font-medium text-white  tracking-widest text-md mb-3">Compare</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="https://www.pensil.in/discourse-alternative"
+                class="text-gray-600 hover:text-gray-700">Discourse</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/discord-alternative" class="text-gray-600 hover:text-gray-700">Discord</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/mightnetwork-alternative" class="text-gray-600 hover:text-gray-700">Mighty
+                Network</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/tribe-alternative" class="text-gray-600 hover:text-gray-700">Tribe</a>
+            </li>
+            <li>
+              <a href="https://www.pensil.in/circle-alternative-community"
+                class="text-gray-600 hover:text-gray-700">Circle</a>
+            </li>
+          </nav>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full w-1/2 px-4">
+          <h2 class="title-font font-medium text-white tracking-widest text-md mb-3">Follow Us On</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="https://twitter.com/PensilHQ" class="text-gray-600 hover:text-gray-700">Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/thepensil/"
+                class="text-gray-600 hover:text-gray-700">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/pensilsocial" class="text-gray-600 hover:text-gray-700">Facebook</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
