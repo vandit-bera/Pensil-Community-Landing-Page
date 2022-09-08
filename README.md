@@ -16,7 +16,7 @@
 
 This project is presently deployed in **Vercel Service**.
 
-[Live Link]()
+[Live Link](https://vb-pensil-landing.vercel.app/)
 
 ---
 
